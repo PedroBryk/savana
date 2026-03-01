@@ -128,4 +128,4 @@ Este projeto foi desenvolvido para fins acadêmicos e sociais.
 Uso educacional permitido.
 
 O **SAVANA** nasce da ideia de que tecnologia pode transformar realidades.  
-Unindo desenvolvimento web e responsabilidade social, mostramos que um simples café — ou uma simples doação — pode mudar uma vida. 🐾☕
+Unindo desenvolvimento web e responsabilidade social, mostramos que um simples café, ou uma simples doação, pode mudar uma vida. 🐾☕
