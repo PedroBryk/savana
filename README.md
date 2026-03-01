@@ -12,7 +12,7 @@ Nosso propósito é simples e especial:
 
 O **SAVANA** foi desenvolvido como:
 
-- 📚 Projeto acadêmico para a disciplina de desenvolvimento web  
+- 📚 Projeto acadêmico para a disciplina de desenvolvimento full stack 
 - 🤝 Projeto social em parceria com a APASFA (Associação Protetora dos Animais São Francisco de Assis)  
 
 A proposta é criar uma **plataforma web** para:
