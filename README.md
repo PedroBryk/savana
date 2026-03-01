@@ -71,7 +71,9 @@ As doações ajudarão a cobrir:
 - Fotos dos cães resgatados  
 - Nome, idade, porte e descrição  
 - Status de adoção  
-- Cadastro, edição e exclusão via sistema interno  
+- Cadastro, edição e exclusão via sistema interno
+
+### 🧷 [Acessar protótipo no Figma](https://www.figma.com/design/3bVmJ4Nilsa0sGSB4KNYj2/SAVANA?node-id=2-9&t=FQszcfhJxwfEgP4W-1)
 
 ---
 
