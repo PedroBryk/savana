@@ -13,7 +13,7 @@ export const CardIcon = ({ className, src, alt }: CardIconProps) => {
         src={src}
         alt={alt}
         className={cn("rounded-full object-cover", className)}
-        
+       
     />
   );
 };

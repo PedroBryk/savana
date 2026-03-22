@@ -12,7 +12,7 @@ interface LoginButtonProps {
 export const LoginButton = ({ image, title, imageAlt, href }: LoginButtonProps) => {
   return (
     <Link href={href}>
-        <div className="flex-col basis-64 items-center justify-center p-4 border rounded-xl">
+        <div className="flex-col basis-64 items-center justify-center p-4">
 
         <CardIcon
             src={image}

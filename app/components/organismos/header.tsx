@@ -1,28 +1,30 @@
 import { Title } from "../atomos/title";
 import { Description } from "../atomos/description";
 import { LoginButton } from "../moleculas/login";
+import Link from "next/link";
 
 export const Header = () => {
   return (
-    <header className="flex items-center justify-between p-6 border-b">
+    <header className="relative bg-header p-6 flex justify-center items-center">
+      
+      <div className="absolute left-6">
+        <LoginButton
+          image="/images/pata.png"
+          imageAlt="Pata de cachorro"
+          title="Log-in"
+          href="/login"
+        />
+      </div>
+     
+      <div className="text-center">
+        <Link href={"/"}>
+          <Title className="text-xl">Savana</Title>
+        </Link>
+        
+        <Description className="text-xs">Pet Café</Description>
+        <Description className="text-xs">Um café para você um lar para eles</Description>
+      </div>
 
-      <LoginButton
-        image="/images/pata.png"
-        imageAlt="Pata de cachorro"
-        title="Log-in"
-        href="/login"
-      />
-
-      <div>
-        <Title className="text-xl">Savana</Title>
-        <Description className="text-xs">
-          Pet Café
-        </Description>
-        <Description className="text-xs">
-          Um café para você um lar para eles
-        </Description>
-      </div> 
-    
     </header>
   );
 };
