@@ -9,8 +9,6 @@ export const Header = () => {
       
       <div className="absolute left-6">
         <LoginButton
-          image="/images/pata.png"
-          imageAlt="Pata de cachorro"
           title="Log-in"
           href="/login"
         />

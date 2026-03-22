@@ -12,7 +12,7 @@ export const CardIcon = ({ className, src, alt }: CardIconProps) => {
     
         src={src}
         alt={alt}
-        className={cn("rounded-full object-cover", className)}
+        className={cn("rounded-sm object-cover w-32 h-32 mb-4", className)}
        
     />
   );

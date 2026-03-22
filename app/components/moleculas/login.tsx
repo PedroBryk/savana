@@ -3,21 +3,16 @@ import { Title } from "../atomos/title";
 import Link from "next/link";
 
 interface LoginButtonProps {
-    image: string;
     title: string;
-    imageAlt: string;
     href: string;
 }
 
-export const LoginButton = ({ image, title, imageAlt, href }: LoginButtonProps) => {
+export const LoginButton = ({title, href }: LoginButtonProps) => {
   return (
     <Link href={href}>
         <div className="flex-col basis-64 items-center justify-center p-4">
 
-        <CardIcon
-            src={image}
-            alt={imageAlt}
-        />
+        <img src="/images/pata.png" alt="" />
         <Title>{title}</Title>
     </div>
     </Link>
