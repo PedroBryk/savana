@@ -1,36 +1,94 @@
+"use client";
+
 import { Input } from "../atomos/input";
 import { Button } from "../atomos/button";
-import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { cadastroFuncionarioSchema } from "../../lib/cadastroFuncionarioSchema";
+import { z } from "zod";
+
+type FormData = z.input<typeof cadastroFuncionarioSchema>;
 
 export const CadastroFuncionario = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<FormData>({
+    resolver: zodResolver(cadastroFuncionarioSchema),
+  });
+
+  const onSubmit = (data: FormData) => {
+    console.log("Funcionário cadastrado:", data);
+    alert("Cadastro realizado com sucesso!");
+  };
+
   return (
-    <div className="flex flex-col justify-around rounded-sm gap-6 p-16 bg-backgroundClaro">
-      
-      <Input 
-        placeholder="CPF" 
-        type="number" 
-      />
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col justify-around rounded-sm gap-6 p-16 bg-backgroundClaro"
+    >
+      {/* CPF */}
+      <div>
+        <Input placeholder="CPF" {...register("cpf")} />
+        {errors.cpf && (
+          <span className="text-red-500 text-sm">
+            {errors.cpf.message}
+          </span>
+        )}
+      </div>
 
-      <Input 
-        placeholder="Nome Completo" 
-        type="text" 
-      />
+      {/* Nome */}
+      <div>
+        <Input placeholder="Nome Completo" {...register("nome")} />
+        {errors.nome && (
+          <span className="text-red-500 text-sm">
+            {errors.nome.message}
+          </span>
+        )}
+      </div>
 
-      <Input 
-        placeholder="Email" 
-        type="email" 
-      />
+      {/* Email */}
+      <div>
+        <Input type="email" placeholder="Email" {...register("email")} />
+        {errors.email && (
+          <span className="text-red-500 text-sm">
+            {errors.email.message}
+          </span>
+        )}
+      </div>
 
-      <Input 
-        placeholder="Senha" 
-        type="Confirme a senha" 
-      />
+      {/* Senha */}
+      <div>
+        <Input
+          type="password"
+          placeholder="Senha"
+          {...register("senha")}
+        />
+        {errors.senha && (
+          <span className="text-red-500 text-sm">
+            {errors.senha.message}
+          </span>
+        )}
+      </div>
 
+      {/* Confirmar Senha */}
+      <div>
+        <Input
+          type="password"
+          placeholder="Confirmar Senha"
+          {...register("confirmarSenha")}
+        />
+        {errors.confirmarSenha && (
+          <span className="text-red-500 text-sm">
+            {errors.confirmarSenha.message}
+          </span>
+        )}
+      </div>
 
-      <Button>
-        Cadastrar
+      <Button type="submit" disabled={isSubmitting}>
+        {isSubmitting ? "Cadastrando..." : "Cadastrar"}
       </Button>
-
-    </div>
+    </form>
   );
 };

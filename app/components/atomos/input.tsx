@@ -1,12 +1,18 @@
 import { cn } from '../../lib/utils';
+import { InputHTMLAttributes } from "react";
 
-interface InputProps {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
-  placeholder: string;
-  type: string;
 }
 
-export const Input = ({ className, placeholder, type}: InputProps) => {
+export const Input = ({ className, ...props }: InputProps) => {
   return (
-    <input className={cn("rounded-sm px-4 py-2 bg-inputColor text-inputTextColor min-w-[300px] max-w-[700px]", className)} type={type} placeholder={placeholder}/>
-)};
+    <input
+      className={cn(
+        "rounded-sm px-4 py-2 bg-inputColor text-inputTextColor min-w-[300px] max-w-[700px]",
+        className
+      )}
+      {...props}
+    />
+  );
+};
