@@ -18,24 +18,32 @@ export const LoginForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
   });
 
   const onSubmit = async (data: LoginFormData) => {
-    try {
-      const user = await login(data.email, data.senha);
+  try {
+    const user = await login(data.email, data.senha);
 
-      console.log("Usuário logado:", user);
+    localStorage.setItem("user", JSON.stringify(user));
 
-      alert(`Bem-vindo, ${user.nome}!`);
+    window.dispatchEvent(new Event("storage"));
 
-      router.push("/gerenciamento");
-    } catch (error: any) {
-      alert(error.message);
-    }
-  };
+    console.log("Usuário logado:", user);
+
+    alert(`Bem-vindo, ${user.nome}!`);
+
+    reset();
+
+    router.push("/gerenciamento");
+
+  } catch (error: any) {
+    alert(error.message);
+  }
+};
 
   return (
     <form
