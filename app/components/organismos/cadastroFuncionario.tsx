@@ -29,7 +29,7 @@ export const CadastroFuncionario = () => {
       className="flex flex-col justify-around rounded-sm gap-6 p-16 bg-backgroundClaro"
     >
       {/* CPF */}
-      <div>
+      <div className="flex flex-col">
         <Input placeholder="CPF" {...register("cpf")} />
         {errors.cpf && (
           <span className="text-red-500 text-sm">
@@ -39,7 +39,7 @@ export const CadastroFuncionario = () => {
       </div>
 
       {/* Nome */}
-      <div>
+      <div className="flex flex-col">
         <Input placeholder="Nome Completo" {...register("nome")} />
         {errors.nome && (
           <span className="text-red-500 text-sm">
@@ -49,7 +49,7 @@ export const CadastroFuncionario = () => {
       </div>
 
       {/* Email */}
-      <div>
+      <div className="flex flex-col">
         <Input type="email" placeholder="Email" {...register("email")} />
         {errors.email && (
           <span className="text-red-500 text-sm">
@@ -59,7 +59,7 @@ export const CadastroFuncionario = () => {
       </div>
 
       {/* Senha */}
-      <div>
+      <div className="flex flex-col">
         <Input
           type="password"
           placeholder="Senha"
@@ -73,7 +73,7 @@ export const CadastroFuncionario = () => {
       </div>
 
       {/* Confirmar Senha */}
-      <div>
+      <div className="flex flex-col">
         <Input
           type="password"
           placeholder="Confirmar Senha"

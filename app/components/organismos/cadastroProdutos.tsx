@@ -34,7 +34,7 @@ export const CadastroProdutos = () => {
       className="flex flex-col justify-around rounded-sm gap-6 p-16 bg-backgroundClaro"
     >
       {/* Nome */}
-      <div>
+      <div className="flex flex-col">
         <Input placeholder="Nome do Produto" {...register("nome")} />
         {errors.nome && (
           <span className="text-red-500 text-sm">
@@ -44,7 +44,7 @@ export const CadastroProdutos = () => {
       </div>
 
       {/* Descrição */}
-      <div>
+      <div className="flex flex-col">
         <Input placeholder="Descrição" {...register("descricao")} />
         {errors.descricao && (
           <span className="text-red-500 text-sm">
@@ -54,7 +54,7 @@ export const CadastroProdutos = () => {
       </div>
 
       {/* Upload de imagem */}
-      <div>
+      <div className="flex flex-col">
         <Input type="file" {...register("imagem")} />
         {errors.imagem && (
           <span className="text-red-500 text-sm">

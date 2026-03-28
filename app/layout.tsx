@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Savana",
   description: "Pet Café Savana",
+  icons: {
+    icon: "/images/pata.png",
+  },
 };
 
 export default function RootLayout({

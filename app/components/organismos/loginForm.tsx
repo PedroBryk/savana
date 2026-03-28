@@ -50,8 +50,8 @@ export const LoginForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col justify-around rounded-sm gap-6 p-16 bg-backgroundClaro"
     >
-      {/* Email */}
-      <div>
+  
+      <div className="flex flex-col">
         <Input
           placeholder="Digite seu email"
           type="email"
@@ -64,8 +64,8 @@ export const LoginForm = () => {
         )}
       </div>
 
-      {/* Senha */}
-      <div>
+      
+      <div className="flex flex-col">
         <Input
           placeholder="Digite sua senha"
           type="password"
@@ -78,12 +78,11 @@ export const LoginForm = () => {
         )}
       </div>
 
-      {/* Botão Entrar */}
+     
       <Button type="submit" disabled={isSubmitting}>
         {isSubmitting ? "Entrando..." : "Entrar"}
       </Button>
 
-      {/* Cadastro */}
       <Link href="/cadastro/funcionario">
         <Button type="button">Cadastrar-se</Button>
       </Link>

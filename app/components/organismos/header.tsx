@@ -16,7 +16,7 @@ export const Header = () => {
      
       <div className="text-center">
         <Link href={"/"}>
-          <Title className="text-xl">Savana</Title>
+          <Title className="text-3xl p-6">Savana</Title>
         </Link>
         
         <Description className="text-xs">Pet Café</Description>

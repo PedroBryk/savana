@@ -15,20 +15,18 @@ export const LoginButton = ({ title, href }: LoginButtonProps) => {
 
   if (loading) return null;
 
-  // 🔴 LOGADO
   if (user) {
     return (
       <div className="flex flex-col items-center justify-center p-4">
         <img src="/images/pata.png" alt="" />
 
-        <Title>Olá, {user.nome}</Title>
+        <Title className="p-2 text-sm font-bold">Olá, {user.nome}</Title>
 
         <LogoutButton />
       </div>
     );
   }
 
-  // 🟢 NÃO LOGADO
   return (
     <Link href={href}>
       <div className="flex flex-col items-center justify-center p-4">
